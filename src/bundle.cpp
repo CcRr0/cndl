@@ -13,8 +13,8 @@
 extern std::filesystem::path root;
 
 const std::regex re_import(R"(\s*//\s*@import\s*\(\s*(.+)\s*\)\s*)");
+const std::regex re_replace(R"(.*//\s*@replace\s*\(\s*(.+)\s*\)\s*)");
 const std::regex re_ignore(R"(.*//\s*@ignore.*)");
-const std::regex re_replace(R"(\s*//\s*@replace\s*\(\s*(.+)\s*\)\s*)");
 
 std::string bundle(std::ifstream &file, const std::filesystem::path &base, int &success, int &total) {
     std::ostringstream oss;
