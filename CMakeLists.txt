@@ -3,4 +3,8 @@ project(cndl)
 
 set(CMAKE_CXX_STANDARD 26)
 
-add_executable(cndl main.cpp)
+include_directories(include)
+
+add_executable(cndl main.cpp
+        src/bundle.cpp
+        src/utility.cpp)
